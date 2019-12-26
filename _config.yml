@@ -11,17 +11,17 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : mmistakes/minimal-mistakes
+# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
-title                    : "PDH's Archive"
+locale                   : "en-US"
+title                    : "Site Title"
 title_separator          : "-"
-subtitle                 : 
-name                     : "Dahoon Park"
-description              : "Image Processing & FPGA Based Hardware Accelerator"
-url		         : "https://pdh930105.github.io"	
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Your Name"
+description              : "An amazing website."
+url                      : "https://pdh930105.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -277,6 +277,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
 
 # Defaults
 defaults:
