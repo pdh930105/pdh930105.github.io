@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DaHoon Park - Academic CV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>DaHoon Park</h1>
+    <p class="subtitle">PhD Student · Efficient Deep Learning / TinyML</p>
+
+    <div class="links">
+        <a href="https://scholar.google.com/citations?user=UkI6tywAAAAJ">Google Scholar</a>
+        <a href="https://github.com/YOUR_GITHUB">GitHub</a>
+        <a href="mailto:your@email.com">Email</a>
+    </div>
+</header>
+
+<!-- ================= Research Story ================= -->
+<section>
+<h2>Research Summary</h2>
+<p>
+I am a PhD student focusing on <b>efficient deep learning systems</b>,
+with an emphasis on <b>low-bit quantization</b> and <b>MCU-level inference</b>.
+My research aims to bridge the gap between algorithm design and hardware efficiency,
+enabling deep neural networks to run on highly resource-constrained environments.
+</p>
+
+<p>
+Specifically, I work on:
+</p>
+<ul>
+<li>Post-Training Quantization (PTQ) for CNNs and LLMs</li>
+<li>Sub-4-bit / Binary neural networks</li>
+<li>MCU-friendly convolution acceleration (e.g., CMSIS-NN, RISC-V)</li>
+<li>Memory-efficient inference and error robustness</li>
+</ul>
+
+<p>
+My long-term goal is to design <b>hardware-aware AI systems</b> that achieve
+state-of-the-art performance under extreme constraints.
+</p>
+</section>
+
+<!-- ================= Highlight ================= -->
+<section>
+<h2>Selected Publications</h2>
+<div id="highlight"></div>
+</section>
+
+<!-- ================= All Publications ================= -->
+<section>
+<h2>All Publications</h2>
+<div id="pubs"></div>
+</section>
+
+<!-- ================= Education ================= -->
+<section>
+<h2>Education</h2>
+<p><b>Your University</b> — PhD in XXX (Expected YYYY)</p>
+</section>
+
+<!-- ================= Projects ================= -->
+<section>
+<h2>Selected Projects</h2>
+<ul>
+<li>MCU-optimized INT8/INT4 convolution kernels</li>
+<li>Mixed-precision PTQ framework for CNNs</li>
+<li>Low-bit inference on RISC-V microcontrollers</li>
+</ul>
+</section>
+
+<footer>
+<p>© 2026 DaHoon Park</p>
+</footer>
+
+</div>
+
+<script>
+fetch("pubs.json")
+.then(res => res.json())
+.then(data => {
+
+    const pubsDiv = document.getElementById("pubs");
+    const highlightDiv = document.getElementById("highlight");
+
+    data.forEach((pub, idx) => {
+
+        const isHighlight = pub.highlight || pub.citations > 20;
+
+        const title = pub.highlight
+            ? `<b>${pub.title}</b>`
+            : pub.title;
+
+        const html = `
+            <div class="pub">
+                <p class="title">${title}</p>
+                <p class="authors">${pub.authors}</p>
+                <p class="venue"><i>${pub.venue}, ${pub.year}</i></p>
+                <p class="cite">Cited by ${pub.citations}</p>
+            </div>
+        `;
+
+        // highlight section
+        if (isHighlight && idx < 5) {
+            highlightDiv.innerHTML += html;
+        }
+
+        // full list
+        pubsDiv.innerHTML += html;
+    });
+
+});
+</script>
+
+</body>
+</html>
