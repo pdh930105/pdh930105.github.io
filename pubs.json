@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Spikedattention: Training-free and fully spike-driven transformer-to-snn conversion with winner-oriented spike shift for softmax operation",
+    "authors": "S Hwang, S Lee, D Park, D Lee, J Kung",
+    "venue": "NeurIPS",
+    "year": "2024",
+    "citations": 19,
+    "highlight": false
+  },
+  {
+    "title": "LightNorm: Area and energy-efficient batch normalization hardware for on-device DNN training",
+    "authors": "SH Noh, J Park, D Park, J Koo, J Choi, J Kung",
+    "venue": "ICCD",
+    "year": "2022",
+    "citations": 15,
+    "highlight": false
+  },
+  {
+    "title": "OPAL: Outlier-preserved microscaling quantization accelerator for generative large language models",
+    "authors": "J Koo, D Park, S Jung, J Kung",
+    "venue": "DAC",
+    "year": "2024",
+    "citations": 14,
+    "highlight": true
+  },
+  {
+    "title": "ZeBRA: Precisely Destroying Neural Networks with Zero-Data Based Repeated Bit Flip Attack",
+    "authors": "D Park, KW Kwon, S Im, J Kung",
+    "venue": "BMVC",
+    "year": "2021",
+    "citations": 7,
+    "highlight": true
+  },
+  {
+    "title": "A dual-precision and low-power cnn inference engine using a heterogeneous processing-in-memory architecture",
+    "authors": "S Jung, J Lee, D Park, Y Lee, JH Yoon, J Kung",
+    "venue": "IEEE TCAS",
+    "year": "2024",
+    "citations": 2,
+    "highlight": false
+  },
+  {
+    "title": "A Survey on Binary and Ternary Neural Networks and Their Realization in Compute-in-Memory for Edge Intelligence",
+    "authors": "D Park, H Park, I Yeo, J Kim, S Lee, H Shin, S Pae, D Fan, J Kung",
+    "venue": "IEEE IoT Journal",
+    "year": "2025",
+    "citations": 1,
+    "highlight": true
+  },
+  {
+    "title": "RISC-V Driven Orchestration of Vector Processing Units and eFlash Compute-in-Memory Arrays for Fast and Accurate Keyword Spotting",
+    "authors": "G Kang, D Park, H Lee, S Jung, J Park, JG Min, Y Lee, J Kung",
+    "venue": "ASP-DAC",
+    "year": "2025",
+    "citations": 1,
+    "highlight": true
+  },
+  {
+    "title": "A 65nm 687.5-TOPS/W Drive Strength-based SRAM Compute-In-Memory Macro with Adaptive Dynamic Range for Edge AI applications",
+    "authors": "DG Choi, J Lee, J Koo, WK Han, D Park, J Kung, J Lee, JH Yoon",
+    "venue": "A-SSCC",
+    "year": "2024",
+    "citations": 1,
+    "highlight": false
+  },
+  {
+    "title": "CAM-CIM: A Hybrid Compute-in-Memory Using Content-Addressable Memory with Subword Split Mapping for Reduced ADC Resolution",
+    "authors": "S Jung, H Lee, Y Lee, J Park, D Park, H Shin, JH Yoon, J Kung",
+    "venue": "ISLPED",
+    "year": "2025",
+    "citations": 0,
+    "highlight": false
+  },
+  {
+    "title": "RIMIX: RISC-V Core with Mixed-Precision SIMD Instruction Extensions Supported by Oracle-Assisted Sub-Network Search for Efficient TinyML",
+    "authors": "J Park, D Park, Y Hong, J Kung",
+    "venue": "ISLPED",
+    "year": "2025",
+    "citations": 0,
+    "highlight": true
+  }
+]
