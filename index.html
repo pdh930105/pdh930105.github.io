@@ -1,128 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DaHoon Park - Academic CV</title>
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="DaHoon Park academic homepage featuring research interests, publications, and projects in efficient deep learning systems.">
+<title>DaHoon Park</title>
+<link rel="stylesheet" href="style.css?v=20260319-2">
 </head>
 
 <body>
+<div class="page-shell">
+    <main class="container">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Academic Homepage</p>
+                <h1>DaHoon Park</h1>
+                <p class="hero-summary">
+                    PhD student working on efficient deep learning systems, low-bit quantization,
+                    and TinyML deployment across algorithm and hardware stacks.
+                </p>
 
-<div class="container">
+                <div class="hero-meta">
+                    <span>Korea University</span>
+                    <span>Efficient AI Systems</span>
+                    <span>Expected PhD 2027</span>
+                </div>
 
-<!-- ================= Header ================= -->
-<header class="header">
+                <div class="links">
+                    <a href="https://scholar.google.com/citations?user=UkI6tywAAAAJ">Google Scholar</a>
+                    <a href="https://github.com/pdh930105">GitHub</a>
+                    <a href="mailto:manyteacher93@korea.ac.kr">Email</a>
+                </div>
+            </div>
 
-    <div class="profile">
-        <img src="profile.jpeg" alt="profile" class="profile-img">
-    </div>
+            <div class="hero-photo">
+                <img src="profile.jpeg" alt="Portrait of DaHoon Park" class="profile-img">
+            </div>
+        </header>
 
-    <div class="intro">
-        <h1>DaHoon Park</h1>
-        <p class="subtitle">PhD Student · Efficient Deep Learning / TinyML</p>
-        <p class="affiliation">XXX Lab, XXX University</p>
+        <section class="panel">
+            <div class="section-heading">
+                <p class="section-kicker">Focus</p>
+                <h2>Research Interests</h2>
+            </div>
 
-        <div class="links">
-            <a href="https://scholar.google.com/citations?user=UkI6tywAAAAJ">Google Scholar</a>
-            <a href="https://github.com/pdh930105">GitHub</a>
-            <a href="mailto:manyteacher93@korea.ac.kr">Email</a>
+            <p class="section-intro">
+                My work focuses on making neural networks practical under extreme resource
+                constraints, with emphasis on quantization, compact architectures, and
+                hardware-aware deployment.
+            </p>
+
+            <ul class="chip-list">
+                <li>Post-Training Quantization</li>
+                <li>Binary and Sub-4-bit Neural Networks</li>
+                <li>MCU and TinyML Inference Optimization</li>
+                <li>Compute-in-Memory and RISC-V Systems</li>
+            </ul>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <p class="section-kicker">Output</p>
+                <h2>Publications</h2>
+            </div>
+
+            <p class="section-intro publication-note">Papers marked with `*` indicate equal contribution.</p>
+            <div id="pubs" class="publication-list"></div>
+        </section>
+
+        <div class="two-column">
+            <section class="panel compact-panel">
+                <div class="section-heading">
+                    <p class="section-kicker">Background</p>
+                    <h2>Education</h2>
+                </div>
+                <p class="compact-text"><strong>Korea University</strong></p>
+                <p class="compact-text">PhD Student, IDSLAB</p>
+                <p class="compact-text muted">Expected February 2027</p>
+            </section>
+
+            <section class="panel compact-panel">
+                <div class="section-heading">
+                    <p class="section-kicker">Work</p>
+                    <h2>Selected Projects</h2>
+                </div>
+                <ul class="project-list">
+                    <li>MCU-optimized convolution kernels</li>
+                    <li>VLM quantization</li>
+                    <li>RISC-V based TinyML acceleration</li>
+                    <li>MX and NV format acceleration</li>
+                </ul>
+            </section>
         </div>
-    </div>
 
-</header>
-
-<!-- ================= Research Summary ================= -->
-<section>
-<h2>Research Summary</h2>
-<p>
-I am a PhD student focusing on <b>efficient deep learning systems</b>,
-with an emphasis on <b>low-bit quantization</b> and <b>MCU-level inference</b>.
-My research bridges algorithm design and hardware efficiency,
-enabling neural networks to run under extreme resource constraints.
-</p>
-
-<ul>
-<li>Post-Training Quantization (PTQ)</li>
-<li>Binary / Sub-4-bit Neural Networks</li>
-<li>MCU / TinyML inference optimization</li>
-<li>Hardware-aware AI systems (CIM, RISC-V)</li>
-</ul>
-</section>
-
-<!-- ================= Publications ================= -->
-<section>
-<h2>Publications</h2>
-<p><small>* equal contribution</small></p>
-<div id="pubs"></div>
-</section>
-
-<!-- ================= Education ================= -->
-<section>
-<h2>Education</h2>
-<p><b>Korea University</b> — PhD in IDSLAB (Expected 2027.02)</p>
-</section>
-
-<!-- ================= Projects ================= -->
-<section>
-<h2>Selected Projects</h2>
-<ul>
-<li>MCU-optimized convolution kernels</li>
-<li>VLM Quantization</li>
-<li>RISC-V based TinyML inference acceleration</li>
-<li>MX/NV-format Acceleration</li>
-</ul>
-</section>
-
-<footer>
-<p>© 2026 DaHoon Park</p>
-</footer>
-
+        <footer class="footer">
+            <p>© 2026 DaHoon Park</p>
+        </footer>
+    </main>
 </div>
 
-<!-- ================= JS: Publications ================= -->
 <script>
-fetch("pubs.json")
-.then(res => res.json())
+fetch("pubs.json?v=20260319-2")
+.then(response => {
+    if (!response.ok) {
+        throw new Error("Failed to load publications.");
+    }
+    return response.json();
+})
 .then(data => {
-
     const pubsDiv = document.getElementById("pubs");
-
-    // 연도별 그룹핑
     const grouped = {};
+
     data.forEach(pub => {
-        if (!grouped[pub.year]) grouped[pub.year] = [];
+        if (!grouped[pub.year]) {
+            grouped[pub.year] = [];
+        }
         grouped[pub.year].push(pub);
     });
 
-    // 연도 내림차순
-    const years = Object.keys(grouped).sort((a, b) => b - a);
+    const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 
     years.forEach(year => {
+        const yearBlock = document.createElement("section");
+        yearBlock.className = "year-block";
 
-        pubsDiv.innerHTML += `<h3 class="year">${year}</h3>`;
+        const yearTitle = document.createElement("h3");
+        yearTitle.className = "year";
+        yearTitle.textContent = year;
+        yearBlock.appendChild(yearTitle);
 
         grouped[year].forEach(pub => {
+            const entry = document.createElement("article");
+            entry.className = "pub";
 
-            const title = pub.highlight
-                ? `<b>${pub.title}</b>`
-                : pub.title;
+            const title = document.createElement("p");
+            title.className = "title";
+            title.textContent = pub.title;
+            if (pub.highlight) {
+                title.classList.add("highlight");
+            }
 
-            const html = `
-                <div class="pub">
-                    <p class="title">${title}</p>
-                    <p class="authors">${pub.authors}</p>
-                    <p class="venue"><i>${pub.venue}</i></p>
-                </div>
-            `;
+            const meta = document.createElement("p");
+            meta.className = "venue";
+            meta.textContent = pub.venue;
 
-            pubsDiv.innerHTML += html;
+            const authors = document.createElement("p");
+            authors.className = "authors";
+            authors.textContent = pub.authors;
+
+            entry.appendChild(title);
+            entry.appendChild(meta);
+            entry.appendChild(authors);
+            yearBlock.appendChild(entry);
         });
 
+        pubsDiv.appendChild(yearBlock);
     });
-
+})
+.catch(error => {
+    const pubsDiv = document.getElementById("pubs");
+    pubsDiv.innerHTML = `<p class="load-error">${error.message}</p>`;
 });
 </script>
-
 </body>
 </html>
