@@ -16,30 +16,43 @@ body {
 .header {
     display: flex;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 18px;
+    margin-bottom: 32px;
 }
 
 .profile-img {
-    width: 140px;
-    height: 140px;
+    width: 88px;
+    height: 110px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #ddd;
+    object-position: center top;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    display: block;
+}
+
+.profile {
+    flex: 0 0 auto;
+}
+
+.intro {
+    min-width: 0;
 }
 
 .intro h1 {
     margin: 0;
+    line-height: 1.05;
 }
 
 .subtitle {
     color: #666;
-    margin-top: 5px;
+    margin-top: 6px;
+    margin-bottom: 0;
 }
 
 .affiliation {
     color: #444;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .links a {
@@ -89,5 +102,11 @@ h2 {
     .header {
         flex-direction: column;
         text-align: center;
+        gap: 14px;
+    }
+
+    .profile-img {
+        width: 96px;
+        height: 120px;
     }
 }

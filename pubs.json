@@ -1,7 +1,7 @@
 [
   {
     "title": "MX-SAFE: Versatile Inference- and Training-Proof Microscaling Format with On-the-Fly Exponent and Mantissa Bit Allocation",
-    "authors": "D Park, J Koo, S Hwang, J, Kung",
+    "authors": "D Park*, J Koo*, S Hwang, J, Kung",
     "venue": "DATE",
     "year": "2026",
     "highlight": true
@@ -15,7 +15,7 @@
   },
   {
     "title": "RISC-V Driven Orchestration of Vector Processing Units and eFlash Compute-in-Memory Arrays for Fast and Accurate Keyword Spotting",
-    "authors": "G Kang, D Park, H Lee, S Jung, J Park, JG Min, Y Lee, J Kung",
+    "authors": "G Kang*, D Park*, H Lee, S Jung, J Park, JG Min, Y Lee, J Kung",
     "venue": "ASP-DAC",
     "year": "2025",
     "highlight": true
@@ -29,7 +29,7 @@
   },
   {
     "title": "RIMIX: RISC-V Core with Mixed-Precision SIMD Instruction Extensions Supported by Oracle-Assisted Sub-Network Search for Efficient TinyML",
-    "authors": "J Park, D Park, Y Hong, J Kung",
+    "authors": "J Park*, D Park*, Y Hong, J Kung",
     "venue": "ISLPED",
     "year": "2025",
     "highlight": true
@@ -44,7 +44,7 @@
   },
   {
     "title": "OPAL: Outlier-preserved microscaling quantization accelerator for generative large language models",
-    "authors": "J Koo, D Park, S Jung, J Kung",
+    "authors": "J Koo*, D Park*, S Jung, J Kung",
     "venue": "DAC",
     "year": "2024",
     "highlight": true
