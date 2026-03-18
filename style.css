@@ -2,6 +2,7 @@ body {
     font-family: "Helvetica Neue", Arial;
     background: #f7f7f7;
     color: #222;
+    margin: 0;
 }
 
 .container {
@@ -11,20 +12,44 @@ body {
     padding: 50px;
 }
 
-header {
-    text-align: center;
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.intro h1 {
+    margin: 0;
 }
 
 .subtitle {
     color: #666;
+    margin-top: 5px;
+}
+
+.affiliation {
+    color: #444;
+    margin-top: 5px;
 }
 
 .links a {
-    margin: 0 10px;
+    margin-right: 12px;
     color: #007acc;
     text-decoration: none;
+    font-size: 14px;
 }
 
+/* Sections */
 section {
     margin-top: 40px;
 }
@@ -34,23 +59,35 @@ h2 {
     padding-bottom: 5px;
 }
 
+.year {
+    margin-top: 25px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+}
+
 .pub {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .title {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .authors {
     color: #444;
+    font-size: 14px;
 }
 
-.cite {
-    color: #888;
+.venue {
+    color: #777;
     font-size: 13px;
 }
 
-b {
-    font-weight: 700;
+/* Mobile */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
 }
