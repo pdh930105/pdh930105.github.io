@@ -1,5 +1,12 @@
 [
   {
+    "title": "MCUPACK: Efficient Packing with Data Reuse and Reduced Flush Overhead in DSP-less MCUs",
+    "authors": "D Park, Y Hong, W Heo, J Kung",
+    "venue": "ICCAD",
+    "year": "2026",
+    "highlight": true
+  },
+  {
     "title": "MX-SAFE: Versatile Inference- and Training-Proof Microscaling Format with On-the-Fly Exponent and Mantissa Bit Allocation",
     "authors": "D Park*, J Koo*, S Hwang, J Kung",
     "venue": "DATE",
