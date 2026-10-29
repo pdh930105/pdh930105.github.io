@@ -1,5 +1,12 @@
 [
   {
+    "title": "A 65nm 1191-TOPS/W Drive-strength-based SRAM Compute-in-memory with Adaptive Dynamic Range for Edge AI Applications",
+    "authors": "D.-G. Choi, J. Lee, J. Koo, W. K. Han, D. Park, J. Kung, J. Lee, J.-H. Yoon",
+    "venue": "JSSC",
+    "year": "2026",
+    "highlight": false
+  },
+  {
     "title": "MX-SAFE+: Universal Microscaling Format with Sign-Aware Asymmetric Exponent-Only Scaling and Dynamic Bit Allocation",
     "authors": "D. Park, J. Koo, S. Hwang, J. Kung",
     "venue": "JETCAS",
