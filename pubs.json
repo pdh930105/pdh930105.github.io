@@ -1,7 +1,7 @@
 [
   {
     "title": "SEC-BDED-MA: Byte-zero and codeword-minimal aliasing for DRAM double-error detection",
-    "authors": "D. Park, D. Lee, K-W. Kwon, J. Kung",
+    "authors": "D. Park, D. Lee, K-W. Kwon*, J. Kung*",
     "venue": "TVLSI",
     "year": "2026",
     "highlight": true
@@ -43,7 +43,7 @@
   },
   {
     "title": "A Survey on Binary and Ternary Neural Networks and Their Realization in Compute-in-Memory for Edge Intelligence",
-    "authors": "D. Park, H. Park, I. Yeo, J. Kim, S. Lee, S. Lee, H. Shin, S.-I. Pae, D. Fan, J. Kung, K.-W. Kwon",
+    "authors": "D. Park, H. Park, I. Yeo, J. Kim, S. Lee, S. Lee, H. Shin, S.-I. Pae, D. Fan, J. Kung*, K.-W. Kwon*",
     "venue": "IEEE IoT Journal",
     "year": "2025",
     "highlight": true
