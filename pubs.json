@@ -1,4 +1,9 @@
 [
+  {"PopBin: Popcount binarization for efficient binary neural networks",
+    "authors": "I. Yeo*, H. Park*, D. Park*, D. Fan, J. Kung, K.-W. Kwon",
+    "venue": "Neurocomputing",
+    "year": "2026",
+    "highlight": true,
   {
     "title": "SEC-BDED-MA: Byte-zero and codeword-minimal aliasing for DRAM double-error detection",
     "authors": "D. Park, D. Lee, K-W. Kwon*, J. Kung*",
